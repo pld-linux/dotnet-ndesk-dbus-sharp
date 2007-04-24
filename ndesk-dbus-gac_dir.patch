@@ -1,0 +1,15 @@
+diff -ur dbus-sharp-0.4.2/include.mk dbus-sharp-0.4.2-gac/include.mk
+--- dbus-sharp-0.4.2/include.mk	2007-03-12 12:33:09.000000000 +0100
++++ dbus-sharp-0.4.2-gac/include.mk	2007-04-24 21:45:07.000000000 +0200
+@@ -4,9 +4,9 @@
+ MONO_DEBUGFLAGS=--debug
+ RUNTIME=mono $(MONO_DEBUGFLAGS)
+ GACUTIL=gacutil
+-GACUTIL_FLAGS=-root $(DESTDIR)$(prefix)/lib
++GACUTIL_FLAGS=-root $(DESTDIR)$(prefix)/lib -gacdir $(prefix)/lib
+ #this isn't great
+-prefix=$(shell dirname `which gacutil`)/..
++prefix=$(PREFIX)
+ 
+ #%.exe:
+ %.exe %.dll %.module:
