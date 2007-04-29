@@ -1,3 +1,4 @@
+# TODO: noarch or optflags
 #
 %include	/usr/lib/rpm/macros.mono
 #
@@ -12,9 +13,6 @@ Source0:	http://www.ndesk.org/archive/dbus-sharp/dbus-sharp-%{version}.tar.gz
 # Source0-md5:	b858011c167c6bc318dcb4d6383996be
 Patch0:		ndesk-dbus-gac_dir.patch
 URL:		http://www.ndesk.org/DBusSharp
-BuildRequires:	autoconf >= 2.52
-BuildRequires:	automake
-BuildRequires:	libtool
 BuildRequires:	mono-csharp >= 1.1.7
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	sed >= 4.0
@@ -36,8 +34,7 @@ Biblioteka .NET do używania D-BUS.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-cd src
-%{__make} install \
+%{__make} -C src install \
 	PREFIX=%{_prefix} \
 	DESTDIR=$RPM_BUILD_ROOT
 
