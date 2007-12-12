@@ -2,16 +2,17 @@
 #
 %include	/usr/lib/rpm/macros.mono
 #
+
+%define  module ndesk-dbus
 Summary:	.NET library for using D-BUS message bus
 Summary(pl.UTF-8):	Biblioteka .NET do używania magistrali przesyłania komunikatów D-BUS
-Name:		ndesk-dbus
+Name:		dotnet-ndesk-dbus-sharp
 Version:	0.6.0
 Release:	0.1
 License:	MIT
 Group:		Libraries
-Source0:	http://www.ndesk.org/archive/dbus-sharp/%{name}-%{version}.tar.gz
+Source0:	http://www.ndesk.org/archive/dbus-sharp/%{module}-%{version}.tar.gz
 # Source0-md5:	5157ba105c9ac491f6e900bc78d1791f
-Patch0:		ndesk-dbus-gac_dir.patch
 URL:		http://www.ndesk.org/DBusSharp
 BuildRequires:	mono-csharp >= 1.1.7
 BuildRequires:	rpmbuild(macros) >= 1.268
@@ -25,8 +26,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Biblioteka .NET do używania D-BUS.
 
 %prep
-%setup -q
-#%patch0 -p1
+%setup -q -n %{module}-%{version}
 
 %build
 %configure
