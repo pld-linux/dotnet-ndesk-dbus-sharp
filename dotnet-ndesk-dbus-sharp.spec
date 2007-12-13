@@ -8,7 +8,7 @@ Summary:	.NET library for using D-BUS message bus
 Summary(pl.UTF-8):	Biblioteka .NET do używania magistrali przesyłania komunikatów D-BUS
 Name:		dotnet-ndesk-dbus-sharp
 Version:	0.6.0
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://www.ndesk.org/archive/dbus-sharp/%{module}-%{version}.tar.gz
@@ -17,6 +17,7 @@ URL:		http://www.ndesk.org/DBusSharp
 BuildRequires:	mono-csharp >= 1.1.7
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	sed >= 4.0
+Obsoletes:	ndesk-dbus
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
