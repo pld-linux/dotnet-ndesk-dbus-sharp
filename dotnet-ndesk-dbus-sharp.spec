@@ -18,7 +18,6 @@ BuildRequires:	automake
 BuildRequires:	mono-csharp >= 1.1.13
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.268
-BuildRequires:	sed >= 4.0
 Obsoletes:	ndesk-dbus
 # should be, but autoconf rejects
 #BuildArch:	noarch
