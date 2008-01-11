@@ -24,10 +24,22 @@ Obsoletes:	ndesk-dbus
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-.NET library for using D-BUS.
+This is a C# implementation of D-Bus. It's often referred to as
+"Managed D-Bus" to avoid confusion with existing bindings (which wrap
+libdbus).
+
+D-Bus is an inter-process communication framework that lets
+applications interface with the system event bus as well as allowing
+them to talk to one another in a peer-to-peer configuration.
 
 %description -l pl.UTF-8
-Biblioteka .NET do używania D-BUS.
+To jest implementacja C# magistrali D-Bus. Jest często nazywana
+"Managed D-Bus" dla odróżnienia od istniejących dowiązań
+(obudowujących libdbus).
+
+D-Bus to szkielet komunikacji międzyprocesowej pozwalający aplikacjom
+porozumiewać się z systemową szyną zdarzeń, a także między sobą w
+konfiguracji peer-to-peer.
 
 %package devel
 Summary:	Development files for ndesk D-BUS .NET library
@@ -63,6 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS COPYING README
 %{_prefix}/lib/mono/gac/NDesk.DBus
 # *.mdb to -debug?
 
