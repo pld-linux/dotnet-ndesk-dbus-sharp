@@ -21,6 +21,8 @@ BuildRequires:	rpmbuild(macros) >= 1.268
 Obsoletes:	ndesk-dbus
 # should be, but autoconf rejects
 #BuildArch:	noarch
+ExclusiveArch:	%{ix86} %{x8664} arm hppa ia64 ppc s390 s390x sparc
+ExcludeArch:	i386
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
