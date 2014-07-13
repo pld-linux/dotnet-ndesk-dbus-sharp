@@ -2,14 +2,14 @@
 %include	/usr/lib/rpm/macros.mono
 #
 %define	module	ndesk-dbus
-Summary:	.NET library for using D-BUS message bus
-Summary(pl.UTF-8):	Biblioteka .NET do używania magistrali przesyłania komunikatów D-BUS
+Summary:	.NET library for using D-Bus message bus
+Summary(pl.UTF-8):	Biblioteka .NET do używania magistrali przesyłania komunikatów D-Bus
 Name:		dotnet-ndesk-dbus-sharp
 Version:	0.6.0
 Release:	3
 License:	MIT
 Group:		Libraries
-Source0:	http://www.ndesk.org/archive/dbus-sharp/%{module}-%{version}.tar.gz
+Source0:	http://www.ndesk.org/archive/ndesk-dbus/%{module}-%{version}.tar.gz
 # Source0-md5:	5157ba105c9ac491f6e900bc78d1791f
 Patch0:		%{name}-monodir.patch
 URL:		http://www.ndesk.org/DBusSharp
@@ -18,6 +18,7 @@ BuildRequires:	automake
 BuildRequires:	mono-csharp >= 1.1.13
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.268
+Requires:	mono >= 1.1.13
 Obsoletes:	ndesk-dbus
 # should be, but autoconf rejects
 #BuildArch:	noarch
@@ -48,6 +49,7 @@ Summary:	Development files for ndesk D-BUS .NET library
 Summary(pl.UTF-8):	Pliki programistyczne biblioteki .NET ndesk D-BUS
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	mono-devel >= 1.1.13
 
 %description devel
 Development files for ndesk D-BUS .NET library.
