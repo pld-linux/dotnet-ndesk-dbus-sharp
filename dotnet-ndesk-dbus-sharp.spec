@@ -1,5 +1,4 @@
 #
-%include	/usr/lib/rpm/macros.mono
 #
 %define	module	ndesk-dbus
 Summary:	.NET library for using D-Bus message bus
